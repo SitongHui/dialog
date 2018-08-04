@@ -3,119 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>dialog</title>
-    <style>
-        .dialog {
-            width: 400px;
-            height: 400px;
-            background: #eeeeee;
-            margin: 20px auto;
-            padding:20px 20px;
-            position: relative;
-        }
-        .dialog > .confirmbtn {
-            position: absolute;
-            top: 50px;
-            right: 50px;
-        }
-        .dialog  > .showdialog {
-            width: 300px;
-            height:150px;
-            border: 1px solid #9c9c9c;
-            background: #c9c9c9;
-            position: absolute;
-            top: 120px;
-            left: 45px;
-            border-radius: 5px;
-            display: none;
-        }
-        .dialog > .showdialog > .dialogtitle {
-            padding: 5px 10px;
-            border-bottom: 1px solid #474747;
-
-        }
-        .dialog > .showdialog > .closebtn {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/index.js"></script>
 </head>
 <body>
 <div class="dialog">
     <span>请输入标题：</span>
-    <input type="text">
+    <input type="text" class="title">
     <input type="button" class="confirmbtn" value="确定">
     <div class="showdialog">
-        <div class="dialogtitle">title</div>
+        <div class="dialogtitle">查看内容</div>
+        <div class="dialogcontent">
+            <span>您输入的标题为：</span>
+            <div class="checktitle"></div>
+        </div>
         <input type="button" value="关闭" class="closebtn">
     </div>
 </div>
-<script>
-    window.onload = function () {
-        new Dialog();
-    };
 
-    /*class Dialog{
-
-        constructor(){
-            this.confirmBtnEle = document.querySelectorAll('.confirmbtn')[0];
-            this.showDialogEle = document.querySelectorAll('.showdialog')[0];
-            this.closeBtnEle = document.querySelectorAll('.closebtn')[0];
-            this.showDialogStatus = false;
-
-            this.initEvent();
-        }
-
-        initEvent(){
-            this.confirmBtnEle.addEventListener('click',() => {
-                this.showDialogStatus = !this.showDialogStatus;
-                if(this.showDialogStatus){
-                    this.showDialogEle.style.display = 'block';
-                }
-            },false)
-
-            this.closeBtnEle.addEventListener('click',() => {
-                this.showDialogStatus = !this.showDialogStatus;
-                if(!this.showDialogStatus){
-                    this.showDialogEle.style.display = 'none';
-                }
-            },false)
-        }
-    }*/
-
-    function Dialog() {
-        this.confirmBtnEle = document.querySelectorAll('.confirmbtn')[0];
-        this.showDialogEle = document.querySelectorAll('.showdialog')[0];
-        this.closeBtnEle = document.querySelectorAll('.closebtn')[0];
-        this.showDialogStatus = false;
-
-        this.initEvent();
-        this.show();
-        this.close();
-    }
-
-    Dialog.prototype.initEvent = function () {
-        this.confirmBtnEle.addEventListener('click',() => {
-            this.showDialogStatus = !this.showDialogStatus;
-            if(this.showDialogStatus){
-                this.showDialogEle.show;
-            }
-        },false)
-
-        this.closeBtnEle.addEventListener('click',() => {
-            this.showDialogStatus = !this.showDialogStatus;
-            if(!this.showDialogStatus){
-                this.showDialogEle.close;
-            }
-        },false)
-    }
-    Dialog.prototype.show = function (element,propName,propVal) {
-        element.style.setProperty('propName','propVal')
-    }
-    Dialog.prototype.close = function (ele) {
-        this.ele.style.display = 'block';
-    }
-
-</script>
 </body>
 </html>

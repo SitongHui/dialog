@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.dialog {
+    width: 400px;
+    height: 320px;
+    background: #eeeeee;
+    margin: 60px auto;
+    padding:20px 20px;
+    position: relative;
+}
+.dialog > .confirmbtn {
+    padding: 2px 5px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+.dialog  > .showdialog {
+    width: 300px;
+    height:150px;
+    border: 1px solid #9c9c9c;
+    background: #c9c9c9;
+    position: absolute;
+    top: 120px;
+    left: 45px;
+    border-radius: 5px;
+    display: none;
+}
+.dialog > .showdialog > .dialogtitle {
+    padding: 5px 10px;
+    border-bottom: 1px solid #9d9d9d;
+}
+.dialog > .showdialog > .closebtn {
+    padding: 2px 5px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.dialog > .showdialog > .dialogcontent{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+.dialog > .showdialog > span {
+    padding: 0 10px;
+}
