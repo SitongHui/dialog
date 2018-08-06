@@ -30,8 +30,14 @@
 .dialog > .showdialog > .dialogtitle {
     padding: 5px 10px;
     border-bottom: 1px solid #9d9d9d;
+    display: flex;
+    justify-content: space-between;
 }
-.dialog > .showdialog > .closebtn {
+.dialog > .showdialog > .dialogtitle > i{
+    font-style: normal;
+    cursor: pointer;
+}
+.dialog > .showdialog > .cancelbtn {
     padding: 2px 5px;
     position: absolute;
     bottom: 20px;
